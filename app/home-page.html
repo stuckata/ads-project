@@ -29,10 +29,24 @@
     <nav>
         <h1>Navigation</h1>
         <ul>
-            <li><span class="italic"><a href="#">Home</a></span></li>
+            <li><a href="#">Home</a></li>
             <li><a href="#">My Ads</a></li>
             <li><a href="#">Publish New Ad</a></li>
             <li><a href="#">Edit Profile</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<!-- Aside - User Ads -->
+<aside class="user-ads">
+    <nav>
+        <h1>My Ads</h1>
+        <ul>
+            <li><span class="italic"><a href="#">All</a></span></li>
+            <li><a href="#">Published</a></li>
+            <li><a href="#">Waiting Approval</a></li>
+            <li><a href="#">Inactive</a></li>
+            <li><a href="#">Rejected</a></li>
         </ul>
     </nav>
 </aside>
@@ -52,6 +66,34 @@
                 <p><span class="ad-label">Email: </span><a href="mailto:#">igra4a@abv.bg</a> </p>
                 <p><span class="ad-label">Tel.: </span><span class="ad-poster-phone">+359 888 77 55 44</span> </p>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- User Ad Section -->
+<section>
+    <div class="ad-container">
+        <div class="ad-side">
+            <div class="ad-header">
+                <h1>Ad title</h1>
+                <time>03-Jan-2015</time>
+            </div>
+            <div class="ad">
+                <img src="images/No_image_available.jpg">
+                <div class="details">
+                    <p>I have iPhone 4S 16GB for sale. Good price. Like a new. Please call me in the evenings or at weekends.</p>
+                    <p><span class="ad-label">Name: </span><span class="ad-poster-name">Victor</span> </p>
+                    <p><span class="ad-label">Email: </span><a href="mailto:#">igra4a@abv.bg</a> </p>
+                    <p><span class="ad-label">Tel.: </span><span class="ad-poster-phone">+359 888 77 55 44</span> </p>
+                </div>
+            </div>
+        </div>
+        <div class="ad-status">
+            <span>Status:</span>
+            <br/>
+            <span id="user-ad-status"></span>
+            <br/>
+            <button class="button" id="deactivate-ad-button">Deactivate</button>
         </div>
     </div>
 </section>
@@ -99,7 +141,7 @@
 
 <!-- Login Section -->
 <section>
-    <form class="login-form">
+    <div class="login-form">
         <h1>Login</h1>
         <div class="data">
             <label for="login-username">Username:</label>
@@ -112,12 +154,12 @@
             <button id="login" class="button">Login</button>
             <a href="#">Register here</a>
         </div>
-    </form>
+    </div>
 </section>
 
 <!-- User Registration Section -->
 <section>
-    <form class="user-registration-form">
+    <div class="user-registration-form">
         <h1>Register</h1>
         <div class="data">
             <label for="registration-username">Username:</label>
@@ -144,7 +186,41 @@
             <button id="register" class="button">Register</button>
             <a href="#">Login here</a>
         </div>
-    </form>
+    </div>
+</section>
+
+<!-- Publish New Ad Section -->
+<section>
+    <div class="publish-new-ad-form">
+        <h1>Publish New Ad</h1>
+        <div class="data">
+            <label for="ad-title">Title:</label>
+            <input type="text" id="ad-title" required=""/>
+            <label for="ad-text">Text:</label>
+            <textarea rows="4" cols="50" id="ad-text" required=""></textarea>
+            <img src="images/No_image_available.jpg">
+            <label for="ad-img-file">Image:</label>
+            <span id="img-source-path"></span>
+            <input type="file" id="ad-img-file" required=""/>
+            <br/>
+            <label for="ad-category">Category:</label>
+            <select id="ad-category">
+                <option selected="selected">Cars</option>
+                <option>Properties</option>
+                <option>Electronics</option>
+                <option>Jobs</option>
+            </select>
+            <br/>
+            <label for="ad-town">Town:</label>
+            <select id="ad-town">
+                <option selected="selected"></option>
+            </select>
+        </div>
+        <div class="panel">
+            <button id="publish-ad" class="button">Publish</button>
+            <button id="cancel-ad" class="button">Cancel</button>
+        </div>
+    </div>
 </section>
 
 <footer>
