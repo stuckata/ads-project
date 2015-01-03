@@ -10,14 +10,31 @@
 
 <body>
 <header>
-    <h1>Ads - Home</h1>
+    <div>
+        <h1><span id="header-span">Ads - Home</span></h1>
+        <span id="username-span">User</span>
+        <span id="logout-span">Logout</span>
+    </div>
 </header>
 
 <!-- Aside - Login/Register -->
-<aside class="login-register-buttons">
+<aside class="user-navigation">
     <p>To publish a new ad, please login.</p>
     <p><button class="button" id="login-button">Login</button></p>
     <p><button class="button" id="register-button">Register</button></p>
+</aside>
+
+<!-- Aside - User Navigation -->
+<aside class="user-navigation">
+    <nav>
+        <h1>Navigation</h1>
+        <ul>
+            <li><span class="italic"><a href="#">Home</a></span></li>
+            <li><a href="#">My Ads</a></li>
+            <li><a href="#">Publish New Ad</a></li>
+            <li><a href="#">Edit Profile</a></li>
+        </ul>
+    </nav>
 </aside>
 
 <!-- Ad Section -->
@@ -79,6 +96,56 @@
         <li><a href="?page=5" rel="last">Last</a></li>
     </ul>
 </nav>
+
+<!-- Login Section -->
+<section>
+    <form class="login-form">
+        <h1>Login</h1>
+        <div class="data">
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username" required="" placeholder="Username..."/>
+            <br/>
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" required="" placeholder="Password..."/>
+        </div>
+        <div class="panel">
+            <button id="login" class="button">Login</button>
+            <a href="#">Register here</a>
+        </div>
+    </form>
+</section>
+
+<!-- User Registration Section -->
+<section>
+    <form class="user-registration-form">
+        <h1>Register</h1>
+        <div class="data">
+            <label for="registration-username">Username:</label>
+            <input type="text" id="registration-username" required="" placeholder="Username..."/>
+            <br/>
+            <label for="registration-password">Password:</label>
+            <input type="password" id="registration-password" required="" placeholder="Password..."/>
+            <label for="registration-confirm-password">Confirm password:</label>
+            <input type="password" id="registration-confirm-password" required="" placeholder="Confirm password..."/>
+            <br/>
+            <label for="registration-name">Name:</label>
+            <input type="text" id="registration-name" required="" placeholder="Name..."/>
+            <label for="registration-email">Email:</label>
+            <input type="email" id="registration-email" required="" placeholder="Email..."/>
+            <br/>
+            <label for="registration-phone">Phone:</label>
+            <input type="tel" id="registration-phone" required="" placeholder="Phone..."/>
+            <label for="registration-town">Town:</label>
+            <select id="registration-town">
+                <option selected="selected"></option>
+            </select>
+        </div>
+        <div class="panel">
+            <button id="register" class="button">Register</button>
+            <a href="#">Login here</a>
+        </div>
+    </form>
+</section>
 
 <footer>
     <p>© 2014 by Software University Foundation, No Rights Reserved</p>
