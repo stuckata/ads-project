@@ -234,6 +234,35 @@
     </div>
 </section>
 
+<!-- Admin Edit User Profile Section -->
+<section>
+    <div class="edit-user-form">
+        <h1>Edit User Profile</h1>
+        <div class="data">
+            <label for="admin-edit-username">Name:</label>
+            <span id="admin-edit-username">username</span>
+            <br/>
+            <label for="admin-edit-name">Name:</label>
+            <input type="text" id="admin-edit-name"/>
+            <br/>
+            <label for="admin-edit-email">Email:</label>
+            <input type="email" id="admin-edit-email"/>
+            <br/>
+            <label for="admin-edit-phone">Phone:</label>
+            <input type="tel" id="admin-edit-phone"/>
+            <br/>
+            <label for="admin-edit-town">Town:</label>
+            <select id="admin-edit-town">
+                <option selected="selected"></option>
+            </select>
+        </div>
+        <div class="panel">
+            <button id="admin-update-user" class="button">Update</button>
+            <button id="admin-cancel-update-user" class="button">Cancel</button>
+        </div>
+    </div>
+</section>
+
 <!-- Change User Password -->
 <section>
     <div class="change-user-password-form">
@@ -289,19 +318,19 @@
     </div>
 </section>
 
-<!-- Edit Ad Section -->
+<!-- User Edit Ad Section -->
 <section>
     <div class="edit-ad-form">
         <h1>Edit Ad</h1>
         <div class="data">
             <label for="ad-title-edit">Title:</label>
-            <input type="text" id="ad-title-edit" required=""/>
+            <input type="text" id="ad-title-edit"/>
             <label for="ad-text-edit">Text:</label>
-            <textarea rows="4" cols="50" id="ad-text-edit" required=""></textarea>
+            <textarea rows="4" cols="50" id="ad-text-edit"></textarea>
             <img src="images/No_image_available.jpg">
             <label for="ad-img-file-edit">Image:</label>
             <span id="img-source-path-edit"></span>
-            <input type="file" id="ad-img-file-edit" required=""/>
+            <input type="file" id="ad-img-file-edit"/>
             <button id="change-img-ad-edit" class="button">Change image</button>
             <button id="delete-img-ad-edit" class="button">Delete image</button>
             <label for="ad-category-edit">Category:</label>
@@ -324,11 +353,11 @@
     </div>
 </section>
 
-<!-- Delete Ad Section -->
+<!-- User Delete Ad Section -->
 <section>
-    <div class="publish-new-ad-form">
+    <div class="delete-ad-form">
         <div class="ad-header">
-            <h1>Confirm Deleting Ad</h1>
+            <h1>Confirm Deleting Ad?</h1>
         </div>
         <div class="data">
             <h1 id="ad-name">Opel Vectra for Sale</h1><time>12-Jan-2015</time>
@@ -383,6 +412,81 @@
             <button id="admin-ad-reject" class="button">Reject</button>
             <button id="admin-ad-edit" class="button">Edit</button>
             <button id="admin-ad-delete" class="button">Delete</button>
+        </div>
+    </div>
+</section>
+
+<!-- Admin Edit Ad Section -->
+<section>
+    <div class="admin-ad-container">
+        <div class="ad-header">
+            <h1>Edit Ad</h1>
+        </div>
+        <div class="data">
+            <label for="admin-ad-title-edit">Title:</label>
+            <input type="text" id="admin-ad-title-edit"/>
+            <label for="admin-ad-text-edit">Text:</label>
+            <textarea rows="4" cols="50" id="admin-ad-text-edit"></textarea>
+            <img src="images/No_image_available.jpg">
+            <label for="ad-img-file-edit">Image:</label>
+            <span id="admin-img-source-path-edit"></span>
+            <input type="file" id="admin-ad-img-file-edit"/>
+            <button id="admin-change-img-ad-edit" class="button">Change image</button>
+            <button id="admin-delete-img-ad-edit" class="button">Delete image</button>
+            <label for="admin-ad-username-edit">Username:</label>
+            <input type="text" id="admin-ad-username-edit"/>
+            <label for="admin-ad-category-edit">Category:</label>
+            <select id="admin-ad-category-edit">
+                <option selected="selected">Cars</option>
+                <option>Properties</option>
+                <option>Electronics</option>
+                <option>Jobs</option>
+            </select>
+            <label for="admin-ad-town-edit">Town:</label>
+            <select id="admin-ad-town-edit">
+                <option selected="selected"></option>
+            </select>
+            <br/>
+            <label for="admin-ad-date-edit">Town:</label>
+            <input type="date" id="admin-ad-date-edit">
+            <label for="admin-ad-town-edit">Town:</label>
+            <select id="admin-ad-status-edit">
+                <option selected="selected">Waiting Approval</option>
+                <option>Approve</option>
+                <option>Reject</option>
+            </select>
+        </div>
+        <div class="panel">
+            <button id="admin-publish-ad-edit" class="button">Edit</button>
+            <button id="admin-cancel-ad-edit" class="button">Cancel</button>
+        </div>
+    </div>
+</section>
+
+<!-- Admin Delete Ad Section -->
+<section>
+    <div class="delete-ad-form">
+        <div class="ad-header">
+            <h1>Confirm Deleting Ad?</h1>
+        </div>
+        <div class="data">
+            <h1 id="admin-delete-ad-name">Opel Vectra for Sale</h1><time>12-Jan-2015</time>
+            <div>
+                <img src="images/No_image_available.jpg">
+                <div>
+                    <p><span id="admin-ad-text-delete">Opel Vectra, 1.8i, petrol, 2003, 4 doors, manual transmission, taxed until 15/05/2015. Price: 850 EUR.</span></p>
+                    <p>Category: <span id="admin-ad-category-delete">Cars</span></p>
+                    <p>Town: <span id="admin-ad-town-delete">Plovdiv</span></p>
+                    <p>Username: <span id="admin-ad-username-delete">Plovdiv</span></p>
+                    <p>Name: <span id="admin-ad-name-delete">Plovdiv</span></p>
+                    <p>Email: <a id="admin-ad-email-delete">igra4a@abv.bg</a></p>
+                    <p>Tel.: <span id="admin-ad-phone-delete">+359 888 77 55 44</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <button id="admin-publish-ad-delete" class="button">Delete</button>
+            <button id="admin-cancel-ad-delete" class="button">Cancel</button>
         </div>
     </div>
 </section>
