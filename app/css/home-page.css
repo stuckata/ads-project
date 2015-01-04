@@ -17,6 +17,7 @@ h1 {
     font-size: 30px;
     padding: 3px;
     border-bottom: solid black 2px;
+    text-align: center;
 }
 
 header h1 {
@@ -29,24 +30,70 @@ a {
     font-weight: bolder;
 }
 
+p {
+    margin: 5px;
+}
+
 ul {
     list-style-type: none;
+}
+
+ul.pagination {
+    width: 700px;
 }
 
 li {
     padding: 5px;
 }
 
-li:hover{
+li:hover {
     background-color: #DAA600;
     border: solid black 1px;
+}
+
+ul.pagination li {
+    display: inline-table;
+    border: solid darkgreen 2px;
+    margin: 1px;
+    padding: 3px 10px 3px 10px;
+    background-color: #A9D18E;
+}
+
+ul.pagination li:hover {
+    background-color: #DAA600;
 }
 
 nav {
     background-color: #A9D18E;
     border: solid darkgreen 2px;
-    width: 160px;
+    width: 180px;
     padding: 10px;
+    margin: 20px;
+}
+
+#nav-pagination{
+    width: 700px;
+    background-color: #E2F0D9;
+    border: none;
+}
+
+section {
+    background-color: #A9D18E;
+    border: solid darkgreen 2px;
+    width: 480px;
+    margin: 20px;
+    padding: 20px;
+}
+
+input {
+    height: 22px;
+    border: solid darkgreen 1px;
+    margin: 5px;
+}
+
+img {
+    width: 160px;
+    height: 160px;
 }
 
 button {
@@ -83,7 +130,8 @@ button:hover {
 #aside-login {
     background-color: #A9D18E;
     border: solid darkgreen 2px;
-    width: 160px;
+    width: 180px;
     padding: 10px;
     font-weight: bold;
+    margin: 20px;
 }

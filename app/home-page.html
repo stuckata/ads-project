@@ -146,17 +146,15 @@
     </aside>
 
     <!-- Nav Pagination -->
-    <nav>
+    <nav id="nav-pagination">
         <ul class="pagination">
             <li><a href="?page=1" rel="first">First</a></li>
             <li><a href="?page=2" rel="prev">Previous</a></li>
-
             <li class="active"><a href="?page=1">1</a></li>
             <li><a href="?page=2">2</a></li>
             <li><a href="?page=3">3</a></li>
             <li><a href="?page=4">4</a></li>
             <li><a href="?page=5">5</a></li>
-
             <li><a href="?page=4" rel="next">Next</a></li>
             <li><a href="?page=5" rel="last">Last</a></li>
         </ul>
@@ -612,7 +610,7 @@
             <h1>Edit Town</h1>
         </div>
         <div class="category">
-            <label for="admin-edit-town">Category:</label>
+            <label for="admin-edit-town">Town:</label>
             <input type="text" id="admin-edit-town">
         </div>
         <div class="panel">
@@ -627,8 +625,8 @@
             <h1>Confirm Deleting Town?</h1>
         </div>
         <div class="category">
-            <label for="admin-delete-town">Category:</label>
-            <span id="admin-delete-town">Jobs</span>
+            <label for="admin-delete-town">Town:</label>
+            <span id="admin-delete-town">Plovdiv</span>
         </div>
         <div class="panel">
             <button id="admin-delete-town-delete" class="button">Delete</button>
