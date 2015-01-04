@@ -4,13 +4,15 @@
 }
 
 body {
-    font-family: Consolas;
+    font-family: Consolas, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-header {
+header, footer {
     padding: 10px;
     background-color: #A9D18E;
     text-align: center;
+    border-top: solid darkgreen 2px;
+    border-bottom: solid darkgreen 2px;
 }
 
 h1 {
@@ -28,6 +30,10 @@ a {
     text-decoration: none;
     color: black;
     font-weight: bolder;
+}
+
+aside {
+    margin: 20px;
 }
 
 p {
@@ -48,7 +54,7 @@ li {
 
 li:hover {
     background-color: #DAA600;
-    border: solid black 1px;
+    border: solid black 2px;
 }
 
 ul.pagination li {
