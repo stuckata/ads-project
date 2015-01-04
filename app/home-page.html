@@ -18,14 +18,14 @@
 </header>
 
 <!-- Aside - Login/Register -->
-<aside class="user-navigation">
+<aside class="navigation">
     <p>To publish a new ad, please login.</p>
     <p><button class="button" id="login-button">Login</button></p>
     <p><button class="button" id="register-button">Register</button></p>
 </aside>
 
 <!-- Aside - User Navigation -->
-<aside class="user-navigation">
+<aside class="navigation">
     <nav>
         <h1>Navigation</h1>
         <ul>
@@ -37,8 +37,21 @@
     </nav>
 </aside>
 
-<!-- Aside - User Ads -->
-<aside class="user-ads">
+<!-- Aside - Admin Navigation -->
+<aside class="navigation">
+    <nav>
+        <h1>Navigation</h1>
+        <ul>
+            <li><a href="#">Ads</a></li>
+            <li><a href="#">Users</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Towns</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<!-- Aside - Ads -->
+<aside class="navigation">
     <nav>
         <h1>My Ads</h1>
         <ul>
@@ -94,12 +107,18 @@
             <span id="user-ad-status"></span>
             <br/>
             <button class="button" id="deactivate-ad-button">Deactivate</button>
+            <br/>
+            <button class="button" id="edit-ad-button">Edit</button>
+            <br/>
+            <button class="button" id="publish-again-ad-button">Publish Again</button>
+            <br/>
+            <button class="button" id="delete-ad-button">Delete Again</button>
         </div>
     </div>
 </section>
 
 <!-- Aside - Categories Navigation -->
-<aside class="categories-navigation">
+<aside class="navigation">
     <nav>
         <h1>Categories</h1>
         <ul>
@@ -113,7 +132,7 @@
 </aside>
 
 <!-- Aside - Town Navigation -->
-<aside class="towns-navigation">
+<aside class="navigation">
     <nav>
         <h1>Towns</h1>
         <ul>
@@ -160,7 +179,7 @@
 <!-- User Registration Section -->
 <section>
     <div class="user-registration-form">
-        <h1>Register</h1>
+        <h1>User Registration</h1>
         <div class="data">
             <label for="registration-username">Username:</label>
             <input type="text" id="registration-username" required="" placeholder="Username..."/>
@@ -189,6 +208,54 @@
     </div>
 </section>
 
+<!-- Edit User Profile Section -->
+<section>
+    <div class="edit-user-form">
+        <h1>Edit Profile</h1>
+        <div class="data">
+            <label for="edit-name">Name:</label>
+            <input type="text" id="edit-name"/>
+            <br/>
+            <label for="edit-email">Email:</label>
+            <input type="email" id="edit-email"/>
+            <br/>
+            <label for="edit-phone">Phone:</label>
+            <input type="tel" id="edit-phone"/>
+            <br/>
+            <label for="edit-town">Town:</label>
+            <select id="edit-town">
+                <option selected="selected"></option>
+            </select>
+        </div>
+        <div class="panel">
+            <button id="update-user" class="button">Update</button>
+            <button id="cancel-update-user" class="button">Cancel</button>
+        </div>
+    </div>
+</section>
+
+<!-- Change User Password -->
+<section>
+    <div class="change-user-password-form">
+        <h1>Change Password</h1>
+        <div class="data">
+            <label for="edit-password">Old Password:</label>
+            <input type="text" id="edit-password"/>
+            <br/>
+            <label for="edit-new-password">New Password:</label>
+            <input type="email" id="edit-new-password"/>
+            <br/>
+            <label for="edit-confirm-new-password">Confirm New Password:</label>
+            <input type="tel" id="edit-confirm-new-password"/>
+        </div>
+        <div class="panel">
+            <button id="update-user-password" class="button">Change Password</button>
+            <button id="cancel-update-user-password" class="button">Cancel</button>
+        </div>
+    </div>
+</section>
+
+
 <!-- Publish New Ad Section -->
 <section>
     <div class="publish-new-ad-form">
@@ -202,7 +269,6 @@
             <label for="ad-img-file">Image:</label>
             <span id="img-source-path"></span>
             <input type="file" id="ad-img-file" required=""/>
-            <br/>
             <label for="ad-category">Category:</label>
             <select id="ad-category">
                 <option selected="selected">Cars</option>
@@ -219,6 +285,63 @@
         <div class="panel">
             <button id="publish-ad" class="button">Publish</button>
             <button id="cancel-ad" class="button">Cancel</button>
+        </div>
+    </div>
+</section>
+
+<!-- Edit Ad Section -->
+<section>
+    <div class="edit-ad-form">
+        <h1>Edit Ad</h1>
+        <div class="data">
+            <label for="ad-title-edit">Title:</label>
+            <input type="text" id="ad-title-edit" required=""/>
+            <label for="ad-text-edit">Text:</label>
+            <textarea rows="4" cols="50" id="ad-text-edit" required=""></textarea>
+            <img src="images/No_image_available.jpg">
+            <label for="ad-img-file-edit">Image:</label>
+            <span id="img-source-path-edit"></span>
+            <input type="file" id="ad-img-file-edit" required=""/>
+            <button id="change-img-ad-edit" class="button">Change image</button>
+            <button id="delete-img-ad-edit" class="button">Delete image</button>
+            <label for="ad-category-edit">Category:</label>
+            <select id="ad-category-edit">
+                <option selected="selected">Cars</option>
+                <option>Properties</option>
+                <option>Electronics</option>
+                <option>Jobs</option>
+            </select>
+            <br/>
+            <label for="ad-town-edit">Town:</label>
+            <select id="ad-town-edit">
+                <option selected="selected"></option>
+            </select>
+        </div>
+        <div class="panel">
+            <button id="publish-ad-edit" class="button">Publish</button>
+            <button id="cancel-ad-edit" class="button">Cancel</button>
+        </div>
+    </div>
+</section>
+
+<!-- Delete Ad Section -->
+<section>
+    <div class="publish-new-ad-form">
+        <h1>Confirm Deleting Ad</h1>
+        <div class="data">
+            <h1 id="ad-name">Opel Vectra for Sale</h1><span id="ad-date">12-Jan-2015</span>
+            <div>
+                <img src="images/No_image_available.jpg">
+                <div>
+                    <p><span id="ad-text-delete">Opel Vectra, 1.8i, petrol, 2003, 4 doors, manual transmission, taxed until 15/05/2015. Price: 850 EUR.</span></p>
+                    <p>Category: <span id="ad-category-delete">Cars</span></p>
+                    <p>Town: <span id="ad-town-delete">Plovdiv</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <button id="publish-ad-delete" class="button">Delete</button>
+            <button id="cancel-ad-delete" class="button">Cancel</button>
         </div>
     </div>
 </section>
