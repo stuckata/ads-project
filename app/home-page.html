@@ -327,9 +327,11 @@
 <!-- Delete Ad Section -->
 <section>
     <div class="publish-new-ad-form">
-        <h1>Confirm Deleting Ad</h1>
+        <div class="ad-header">
+            <h1>Confirm Deleting Ad</h1>
+        </div>
         <div class="data">
-            <h1 id="ad-name">Opel Vectra for Sale</h1><span id="ad-date">12-Jan-2015</span>
+            <h1 id="ad-name">Opel Vectra for Sale</h1><time>12-Jan-2015</time>
             <div>
                 <img src="images/No_image_available.jpg">
                 <div>
@@ -342,6 +344,45 @@
         <div class="panel">
             <button id="publish-ad-delete" class="button">Delete</button>
             <button id="cancel-ad-delete" class="button">Cancel</button>
+        </div>
+    </div>
+</section>
+
+<!-- Admin Ad Section -->
+<section>
+    <div class="admin-ad-container">
+        <div class="ad-header">
+            <h1 id="ad-title-admin">iPhone 4S for Sale</h1><time>3-Jan-2015</time>
+        </div>
+        <div>
+            <img src="images/No_image_available.jpg">
+            <br/>
+            <div>
+                Status:
+                <br/>
+                <span id="admin-ad-status"></span>
+            </div>
+        </div>
+        <div>
+            <span id="admin-ad-text">I have iPhone 4S 16GB for sale.</span>
+            <br/>
+            Username: <span id="admin-ad-username"></span>
+            <br/>
+            Name: <span id="admin-ad-name"></span>
+            <br/>
+            Email: <span id="admin-ad-email"></span>
+            <br/>
+            Tel.: <span id="admin-ad-tel"></span>
+            <br/>
+            Category: <span id="admin-ad-category"></span>
+            <br/>
+            Town: <span id="admin-ad-town"></span>
+        </div>
+        <div>
+            <button id="admin-ad-approve" class="button">Approve</button>
+            <button id="admin-ad-reject" class="button">Reject</button>
+            <button id="admin-ad-edit" class="button">Edit</button>
+            <button id="admin-ad-delete" class="button">Delete</button>
         </div>
     </div>
 </section>
