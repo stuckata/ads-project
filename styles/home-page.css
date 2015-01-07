@@ -1,0 +1,143 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: Consolas, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header, footer {
+    padding: 10px;
+    background-color: #A9D18E;
+    text-align: center;
+    border-top: solid darkgreen 2px;
+    border-bottom: solid darkgreen 2px;
+}
+
+h1 {
+    font-size: 30px;
+    padding: 3px;
+    border-bottom: solid black 2px;
+    text-align: center;
+}
+
+header h1 {
+    border-bottom: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+aside {
+    margin: 20px;
+}
+
+p {
+    margin: 5px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul.pagination {
+    width: 700px;
+}
+
+li {
+    padding: 5px;
+}
+
+li:hover {
+    background-color: #DAA600;
+    border: solid black 2px;
+}
+
+ul.pagination li {
+    display: inline-table;
+    border: solid darkgreen 2px;
+    margin: 1px;
+    padding: 3px 10px 3px 10px;
+    background-color: #A9D18E;
+}
+
+ul.pagination li:hover {
+    background-color: #DAA600;
+}
+
+nav {
+    background-color: #A9D18E;
+    border: solid darkgreen 2px;
+    width: 180px;
+    padding: 10px;
+    margin: 20px;
+}
+
+#nav-pagination{
+    width: 700px;
+    background-color: #E2F0D9;
+    border: none;
+}
+
+section {
+    background-color: #A9D18E;
+    border: solid darkgreen 2px;
+    width: 480px;
+    margin: 20px;
+    padding: 20px;
+}
+
+input {
+    height: 22px;
+    border: solid darkgreen 1px;
+    margin: 5px;
+}
+
+img {
+    width: 160px;
+    height: 160px;
+}
+
+button {
+    background-color: #70AD47;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border: solid darkgreen 2px;
+    border-radius: 6px;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: white;
+    color: #70AD47;
+}
+
+.container {
+    background-color: #E2F0D9;
+}
+
+.navigation-left {
+    float: left;
+}
+.navigation-right {
+    float: right;
+}
+
+#logout-span {
+    font-weight: normal;
+}
+
+#aside-login {
+    background-color: #A9D18E;
+    border: solid darkgreen 2px;
+    width: 180px;
+    padding: 10px;
+    font-weight: bold;
+    margin: 20px;
+}
