@@ -7,17 +7,20 @@
         <div class="form-group">
             <label for="loginUsername" class="col-md-4 control-label">Username</label>
             <div class="col-md-8">
-                <input type="text" class="form-control" id="loginUsername" placeholder="Username">
+                <input type="text" class="form-control" id="loginUsername" placeholder="Username" 
+                ng-model ="user.username">
             </div>
         </div>
         <div class="form-group">
             <label for="loginPassword" class="col-md-4 control-label">Password</label>
             <div class="col-md-8">
-                <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                <input type="password" class="form-control" id="loginPassword" placeholder="Password" 
+                ng-model ="user.password">
             </div>
         </div>
         <div>
-            <button type="button" class="btn btn-primary btn-lg btn-block">Login</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block" 
+            ng-click="login(user)">Login</button>
             <button type="button" class="btn btn-default btn-lg btn-block">Register here</button>
         </div>
     </form>
