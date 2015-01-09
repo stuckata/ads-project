@@ -7,7 +7,7 @@ app.factory('authentication', ['localStorageServiceProvider', function(localStor
 	}
 
 	function getUserData (data) {
-		localStorageServiceProvider.set(key);
+		localStorageServiceProvider.get(key);
 	}
 
 	return {
