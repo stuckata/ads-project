@@ -6,7 +6,7 @@ function($resource, baseServiceUrl, authentication) {
 			.save(user)
 			.$promise
 			.then(function (data) {
-				authentication.saveUser(data);
+				authentication.saveUser(angular.fromJson(data));
 			});
 	}
 
