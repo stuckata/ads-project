@@ -5,7 +5,7 @@ app.factory('adsData', ['$resource', 'baseServiceUrl',function($resource, baseSe
 	});
 
 	function getPublicAds() {
-		return resource.query();
+		return resource.get();
 	}
 
 	function addAd(ad) {
