@@ -1,15 +1,14 @@
-<!-- Public Ads Section -->
-<section class="col-md-9">
-    <div class="row">
-        <div class="col-md-6">
-            <h3 class="text-center">Ad Title...</h3>
-        </div>
-        <div class="col-md-2">
-            <h3 class="text-right"><small>3-Jan-2015</small></h3>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8">
+<section id="publicAds" class="col-md-6">
+    <ul>
+        <li ng-repeat="ad in adsData.ads">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>{{ad.title}}</h3>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-right"><small>3-Jan-2015</small></h3>
+                </div>
+            </div>
             <form class="form-horizontal">
                 <div class="form-group">
                     <div class="col-md-2">
@@ -39,16 +38,4 @@
                     </div>
                 </div>
             </form>
-        </div>
-        <div class="col-md-4">
-            <p>Status:</p>
-            <p><span>Waiting Approval</span>
-            </p>
-            <p>
-                <div>
-                    <button type="submit" class="btn btn-success">Deactivate</button>
-                </div>
-            </p>
-        </div>
-    </div>
 </section>

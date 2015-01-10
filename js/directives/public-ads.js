@@ -5,4 +5,4 @@ app.directive('publicAds', function(){
 		templateUrl: 'templates/public/public-ads.html',
 		replace: true
 	};
-}]);
+});
