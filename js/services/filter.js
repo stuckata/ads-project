@@ -1,25 +1,30 @@
 app.factory('filter', function() {
 
-	var filterParams = {};
+	var params = {};
 
 	function filterByTown (town) {
 
-		filterParams.townId = town.id;
+		params.townId = town.id;
 	}
 
 	function filterByCategory (category) {
 		
-		filterParams.categoryId = category.id;
+		params.categoryId = category.id;
 	}
 
-	function getFilterParams () {
+	function getParams () {
 		
-		return filterParams;
+		return params;
+	}
+
+	function setPageParams (pageParams) {
+		// body...
 	}
 
 	return {
 		filterByTown: filterByTown,
 		filterByCategory: filterByCategory,
-		getFilterParams: getFilterParams
+		getParams: getParams,
+		setPageParams: setPageParams
 	};
 });

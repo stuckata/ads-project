@@ -12,7 +12,7 @@
                 <h3 class="text-right"><small><tt>{{ ad.date | date: "dd-MMM-yyyy" }}</tt></small></h3>
             </div>
         </div>
-        <form class="form-horizontal">
+        <div class="form-horizontal">
             <div class="form-group">
                 <div class="col-md-2">
                     <img data-ng-src={{ad.imageDataUrl}} class="img-responsive">
@@ -40,6 +40,9 @@
                     <p class="form-control-static">{{ad.ownerPhone}}</p>
                 </div>
             </div>
-        </form>
+        </div>
     </div>
+    <pagination page="startPage" ng-model="currentPage" total-items="adsData.numItems"
+        ng-change="pageChanged()" items-per-page="pageSize">
+    </pagination>
 </section>
