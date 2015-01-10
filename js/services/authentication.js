@@ -3,14 +3,17 @@ app.factory('authentication', function() {
 	var key = 'user';
 
 	function saveUserData(data) {
+
 		localStorage.setItem(key, angular.toJson(data));
 	}
 
 	function getUserData() {
+
 		return angular.fromJson(localStorage.getItem(key));
 	}
 
 	function getHeaders(argument) {
+
 		var headers = {};
 		var userData = getUserData();
 
@@ -22,12 +25,19 @@ app.factory('authentication', function() {
 	}
 
 	function removeUser() {
+
 		localStorage.removeItem(key);
 	}
 
 	function isAdmin() {
+
 		var isAdmin = getUserData().isAdmin;
 		return isAdmin;
+	}
+
+	function isLoggedIn () {
+		
+		return !!getUserData();
 	}
 
 	return {
@@ -35,6 +45,7 @@ app.factory('authentication', function() {
 		getUser: getUserData,
 		getHeaders: getHeaders,
 		removeUser: removeUser,
-		isAdmin: isAdmin
+		isAdmin: isAdmin,
+		isLoggedIn: isLoggedIn
 	}
 })
