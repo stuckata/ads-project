@@ -1,4 +1,5 @@
 app.controller('RegisterCtrl', ['$scope', 'townsData', 'userData', function($scope, townsData, userData) {
+	
 	townsData.getTowns()
 		.$promise
 		.then(function(data) {
@@ -6,6 +7,11 @@ app.controller('RegisterCtrl', ['$scope', 'townsData', 'userData', function($sco
 		});
 
 	$scope.register = function(user) {
-		userData.register(user);
-	}
+
+		userData.register(user)
+			.$promise
+			.then(function (data) {
+				$location.path('/');
+			});
+	};
 }]);

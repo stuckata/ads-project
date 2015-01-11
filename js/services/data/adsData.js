@@ -4,6 +4,11 @@ app.factory('adsData', ['$resource', 'baseServiceUrl', function($resource, baseS
 		update: { method: 'PUT' }
 	});
 
+	var postResource = $resource(baseServiceUrl + 'user/ads', {
+		update: { method: 'POST' }
+	});
+
+
 	function getPublicAds(filterParams) {
 
 		return resource.get(filterParams);
@@ -11,7 +16,12 @@ app.factory('adsData', ['$resource', 'baseServiceUrl', function($resource, baseS
 
 	function addAd(ad) {
 
-		return resource.save(ad);
+			return postResource
+				.save(ad)
+				.$promise
+				.then(function (data) {
+					$location.path('/');
+				});
 	};
 
 	function editAd(adId, ad) {
