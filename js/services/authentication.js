@@ -42,8 +42,11 @@ app.factory('authentication', function() {
 
 	function getUsername () {
 		
-		var username = getUserData().username;
-		return username;
+		if (getUserData()) {
+			var username = getUserData().username;
+			return username;
+		} 
+		return '';
 	}
 
 	return {
