@@ -1,0 +1,19 @@
+<div class="col-md-2">
+
+    <aside class="col-md-12">
+        <nav class="list-group">
+            <span class="list-group-item active">Categories</span>
+            <a href="" class="list-group-item" ng-repeat="category in categories | limitTo:limitCategories" ng-click="categoryClicked(category)">{{ category.name }}</a>
+            <a href="" ng-click="toggleCategories()" class="list-group-item"><i>{{limitCategories == 5 ? 'Show All Categories' : 'Show Less'}}</i></a>
+        </nav>
+    </aside>
+
+    <aside id="towns" class="col-md-12">
+        <nav class="list-group">
+            <span class="list-group-item active">Towns</span>
+            <a href="" ng-repeat="town in towns | limitTo:limitTowns" ng-click="townClicked(town)" class="list-group-item">{{town.name}}</a>
+            <a href="" ng-click="toggleTowns()" class="list-group-item"><i>{{limitTowns == 5 ? 'Show All Towns' : 'Show Less'}}</i></a>
+        </nav>
+    </aside>
+
+</div>

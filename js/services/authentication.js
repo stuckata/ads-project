@@ -12,7 +12,7 @@ app.factory('authentication', function() {
 		return angular.fromJson(localStorage.getItem(key));
 	}
 
-	function getHeaders(argument) {
+	function getHeaders() {
 
 		var headers = {};
 		var userData = getUserData();
@@ -40,12 +40,19 @@ app.factory('authentication', function() {
 		return !!getUserData();
 	}
 
+	function getUsername () {
+		
+		var username = getUserData().username;
+		return username;
+	}
+
 	return {
 		saveUser: saveUserData,
 		getUser: getUserData,
 		getHeaders: getHeaders,
 		removeUser: removeUser,
 		isAdmin: isAdmin,
-		isLoggedIn: isLoggedIn
+		isLoggedIn: isLoggedIn,
+		getUsername: getUsername
 	}
 })
