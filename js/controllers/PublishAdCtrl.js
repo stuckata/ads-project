@@ -13,10 +13,10 @@ app.controller('PublishAdCtrl', ['$scope', 'adsData', 'categoriesData', 'townsDa
 		});
 
 	$scope.publishAd = function(ad) {
-		adsData.add(ad)
-			.$promise
-			.then(function (data) {
-				$location.path('/');
-			});
+	adsData.add(ad)
+		.$promise
+		.then(function (data) {
+			$location.path('/');
+		});
 	}
 }]);

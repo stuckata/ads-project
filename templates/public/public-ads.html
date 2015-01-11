@@ -4,45 +4,46 @@
         </div>
     </div>
     <div ng-cloak ng-repeat="ad in adsData.ads">
-        <div class="row">
-            <div class="col-md-6">
-                <h3>{{ ad.title }}</h3>
-            </div>
-            <div class="col-md-6">
-                <h3 class="text-right"><small><tt>{{ ad.date | date: "dd-MMM-yyyy" }}</tt></small></h3>
-            </div>
-        </div>
-        <div class="form-horizontal">
-            <div class="form-group">
-                <div class="col-md-2">
-                    <img data-ng-src={{ad.imageDataUrl}} class="img-responsive">
+        <div class="col-md-12" id="adBody">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>{{ ad.title }}</h3>
                 </div>
-                <div class="col-md-10">
-                    <textarea rows="5" class="form-control-static col-md-12" disabled>{{ ad.text }}</textarea>
+                <div class="col-md-6">
+                    <h3 class="text-right"><small><tt>{{ ad.date | date: "dd-MMM-yyyy" }}</tt></small></h3>
                 </div>
             </div>
-            <div class="form-group">
-                <label class="col-md-offset-2 col-md-2 control-label">Name:</label>
-                <div class="col-md-8">
-                    <p class="form-control-static">{{ad.ownerName}}</p>
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <div class="col-md-2">
+                        <img data-ng-src={{ad.imageDataUrl}} class="img-responsive">
+                    </div>
+                    <div class="col-md-10">
+                        <textarea rows="5" class="form-control-static col-md-12" disabled>{{ ad.text }}</textarea>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label class="col-md-offset-2 col-md-2 control-label">Email:</label>
-                <div class="col-md-8">
-                    <p class="form-control-static"><a href="mailto:#">{{ad.ownerEmail}}</a>
-                    </p>
+                <div class="form-group">
+                    <label class="col-md-offset-2 col-md-2 control-label">Name:</label>
+                    <div class="col-md-8">
+                        <p class="form-control-static">{{ad.ownerName}}</p>
+                    </div>
                 </div>
-            </div>
-            <div class="form-group">
-                <label class="col-md-offset-2 col-md-2 control-label">Tel.:</label>
-                <div class="col-md-8">
-                    <p class="form-control-static">{{ad.ownerPhone}}</p>
+                <div class="form-group">
+                    <label class="col-md-offset-2 col-md-2 control-label">Email:</label>
+                    <div class="col-md-8">
+                        <p class="form-control-static"><a href="mailto:#">{{ad.ownerEmail}}</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-offset-2 col-md-2 control-label">Tel.:</label>
+                    <div class="col-md-8">
+                        <p class="form-control-static">{{ad.ownerPhone}}</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <pagination page="startPage" ng-model="currentPage" total-items="adsData.numItems"
-        ng-change="pageChanged()" items-per-page="pageSize">
+    <pagination page="startPage" ng-model="currentPage" total-items="adsData.numItems" ng-change="pageChanged()" items-per-page="pageSize">
     </pagination>
 </section>

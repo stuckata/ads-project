@@ -8,10 +8,10 @@ app.controller('RegisterCtrl', ['$scope', 'townsData', 'userData', function($sco
 
 	$scope.register = function(user) {
 
-		userData.register(user)
-			.$promise
-			.then(function (data) {
-				$location.path('/');
-			});
+	userData.register(user)
+		.$promise
+		.then(function (data) {
+			$location.path('/');
+		});
 	};
 }]);

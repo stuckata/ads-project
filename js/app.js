@@ -13,11 +13,11 @@ app.config(['$routeProvider', function ($routeProvider) {
 		templateUrl: 'templates/login.html',
 		controller: 'LoginCtrl'
 	});
-		$routeProvider.when('/register', {
+	$routeProvider.when('/register', {
 		templateUrl: 'templates/register.html',
 		controller: 'RegisterCtrl'
 	});
-		$routeProvider.when('/publish-ad', {
+	$routeProvider.when('/publish-ad', {
 		templateUrl: 'templates/user/publish-ad.html',
 		controller: 'PublishAdCtrl'
 	});

@@ -1,0 +1,11 @@
+footer, .page-header, #adBody, .list-group-item {
+	background-color: #A9D18E;
+}
+
+#adBody {
+	margin-bottom: 20px;
+}
+
+#body {
+	background-color: #E2F0D9;
+}
