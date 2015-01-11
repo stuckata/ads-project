@@ -8,7 +8,7 @@ app.controller('TownsCtrl', ['$scope', '$rootScope', 'townsData', 'filter', func
 			$scope.towns = data;
 		});
 
-	$scope.toggleTowns = function (townsData) {
+	$scope.toggleTowns = function () {
 		if($scope.limitTowns == 5){
 			$scope.limitTowns = $scope.towns.length;
 		} else {

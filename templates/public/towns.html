@@ -4,6 +4,6 @@
         <a href="" ng-repeat="town in towns | limitTo:limitTowns" ng-click="townClicked(town)" 
         class="list-group-item">{{town.name}}</a>
         <a href="" ng-click="toggleTowns()" 
-        class="list-group-item"><i>{{limit == 5 ? 'Show All Towns' : 'Show Less'}}</i></a>
+        class="list-group-item"><i>{{limitTowns == 5 ? 'Show All Towns' : 'Show Less'}}</i></a>
     </nav>
 </aside>
